@@ -19,9 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "publish": "npm run date && npm run deploy",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "date": "bash ./scripts/update-line.sh 25",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -21,16 +21,32 @@ const style = {
 
 function App() {
   const PH_COLOR = '#0E6210';
+  const BP_COLOR = '#000';
+  let updatedDate = '2024-02-06';
+
   const [open, setOpen] = useState(false);
   const [eventName, setEventName] = useState('');
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  let BP = [
+    { title: 'BP', date: '2024-01-06', color: BP_COLOR },
+    { title: 'BP', date: '2024-01-21', color: BP_COLOR },
+    { title: 'BP', date: '2024-02-04', color: BP_COLOR },
+  ]
+
   let ph = [
     { title: 'Christmas', date: '2023-12-25', color: PH_COLOR },
     { title: 'New Year', date: '2024-01-01', color: PH_COLOR },
-    { title: 'CNY', start: '2024-02-10', end: '2024-02-10', color: PH_COLOR },
+    { title: 'CNY', start: '2024-02-10', end: '2024-02-13', color: PH_COLOR },
     { title: 'Good Friday', date: '2024-03-29', color: PH_COLOR },
+    { title: 'Hari Raya Puasa', date: '2024-04-10', color: PH_COLOR },
+    { title: 'Labour Day', date: '2024-05-01', color: PH_COLOR },
+    { title: 'Vesak Day', date: '2024-05-22', color: PH_COLOR },
+    { title: 'Hari Raya Haji', date: '2024-06-17', color: PH_COLOR },
+    { title: 'National Day', date: '2024-08-09', color: PH_COLOR },
+    { title: 'Deepavali', date: '2024-10-31', color: PH_COLOR },
+    { title: 'Christmas Day', date: '2024-12-25', color: PH_COLOR },
   ];
 
   let myEvents = [
@@ -42,9 +58,13 @@ function App() {
     { title: 'Cousin', start: '2023-12-24', end: '2023-12-26' },
     { title: 'Mama\'s return', date: '2024-01-04' },
     { title: 'Hokkaido!', start: '2024-01-12', end: '2024-01-20', color: '#6897BB' },
+    { title: 'Genting', start: '2024-01-26', end: '2024-01-29', color: '#6897BB' },
+    { title: 'Dental', date: '2024-02-03'},
+    { title: 'GG Lunch', date: '2024-02-03'},
+    { title: 'CNY Eve Dinner', date: '2024-02-09'},
   ];
 
-  let events = [...ph, ...myEvents];
+  let events = [...ph, ...myEvents, ...BP];
 
   const onEventClicked = (e) => {
     setEventName(e.event.title);
@@ -52,14 +72,17 @@ function App() {
   };
 
   return (
-    <div className='App md:grid md:grid-cols-4 h-screen p-8'>
+    <div className='App md:grid md:grid-cols-4 h-screen p-8 bg'>
       <div className='mb-8'>
         <h1 className='text-2xl font-bold underline mb-8'>Some  Calendar</h1>
-        <div className='text-xl'>
-          A public calendar that may or may not be real events.
+        <div className='left-col md:pb-8 md:pr-8'>
+          <div className='text-xl'>
+            A calendar that may or may not be real events.
+          </div>
+          <div className='mt-4 text-gray-700 italic'>Last updated: {updatedDate}</div>
         </div>
       </div>
-      <div className='md:col-span-3 h-full'>
+      <div className='md:col-span-3 md:h-full h-[65vh] mb-8'>
         <FullCalendar
           plugins={[dayGridPlugin]}
           height='100%'
@@ -67,6 +90,7 @@ function App() {
           events={events}
           firstDay={1}
           eventClick={onEventClicked}
+          dayMaxEventRows={true}
         />
       </div>
       <Modal

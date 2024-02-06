@@ -16,3 +16,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  border-color: #011a32 !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #B8BF75;  
+  background-image: url("https://storage.googleapis.com/sticker-prod/XBNItOsFlX1kcckI40Tu/2-1.thumb128.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+thead {
+  background-color: #B45D8E;
+}

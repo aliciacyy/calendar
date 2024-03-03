@@ -22,7 +22,7 @@ const style = {
 function App() {
   const PH_COLOR = '#0E6210';
   const BP_COLOR = '#000';
-  let updatedDate = '2024-02-06';
+  let updatedDate = '2024-03-03';
 
   const [open, setOpen] = useState(false);
   const [eventName, setEventName] = useState('');
@@ -33,6 +33,8 @@ function App() {
     { title: 'BP', date: '2024-01-06', color: BP_COLOR },
     { title: 'BP', date: '2024-01-21', color: BP_COLOR },
     { title: 'BP', date: '2024-02-04', color: BP_COLOR },
+    { title: 'Cycling with P', date: '2024-02-18', color: BP_COLOR },
+    { title: 'BP Cat Cafe', date: '2024-03-03', color: BP_COLOR },
   ]
 
   let ph = [
@@ -62,6 +64,13 @@ function App() {
     { title: 'Dental', date: '2024-02-03'},
     { title: 'GG Lunch', date: '2024-02-03'},
     { title: 'CNY Eve Dinner', date: '2024-02-09'},
+    { title: 'Valentine\'s Dinner', date: '2024-02-14'},
+    { title: 'W Dinner', date: '2024-02-16'},
+    { title: '1st anniversary ❤️', date: '2024-03-05', color: '#ff6666'},
+    { title: 'Doc appt', date: '2024-02-27'},
+    { title: 'Blood test', date: '2024-03-23'},
+    { title: 'Doc appt', date: '2024-03-27'},
+    { title: 'ITZY Concert!', date: '2024-04-06'},
   ];
 
   let events = [...ph, ...myEvents, ...BP];

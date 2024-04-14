@@ -51,7 +51,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build  # Your build folder
           # publish_branch: gh-pages  # Target branch
-          enable_jekyll: true
+          # enable_jekyll: true
 
   # Deployment job
   # deploy:

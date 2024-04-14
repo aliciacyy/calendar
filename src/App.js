@@ -35,6 +35,8 @@ function App() {
     { title: 'BP', date: '2024-02-04', color: BP_COLOR },
     { title: 'Cycling with P', date: '2024-02-18', color: BP_COLOR },
     { title: 'BP Cat Cafe', date: '2024-03-03', color: BP_COLOR },
+    { title: 'BP', date: '2024-03-31', color: BP_COLOR },
+    { title: 'BP', date: '2024-04-10', color: BP_COLOR },
   ]
 
   let ph = [
@@ -71,6 +73,11 @@ function App() {
     { title: 'Blood test', date: '2024-03-23'},
     { title: 'Doc appt', date: '2024-03-27'},
     { title: 'ITZY Concert!', date: '2024-04-06'},
+    { title: 'Roast Duck', date: '2024-04-14'},
+    { title: 'New coy meeting', date: '2024-04-15'},
+    { title: 'Hotel staycay ❤️', date: '2024-05-04'},
+    { title: 'Blood test', date: '2024-05-11'},
+    { title: 'Doc appt', date: '2024-05-18'},
   ];
 
   let events = [...ph, ...myEvents, ...BP];

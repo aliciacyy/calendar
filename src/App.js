@@ -75,7 +75,7 @@ function App() {
     { title: 'ITZY Concert!', date: '2024-04-06'},
     { title: 'Roast Duck', date: '2024-04-14'},
     { title: 'New coy meeting', date: '2024-04-15'},
-    { title: 'Hotel staycay ❤️', date: '2024-05-04'},
+    { title: 'Hotel staycay ❤️', date: '2024-05-04', color: '#ff6666'},
     { title: 'Blood test', date: '2024-05-11'},
     { title: 'Doc appt', date: '2024-05-18'},
   ];

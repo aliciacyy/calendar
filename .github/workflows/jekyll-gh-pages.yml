@@ -26,10 +26,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Update date
-        run: bash ./scripts/update-line.sh 25
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Make the script files executable
+        run: chmod +x ./scripts/update-line.sh
+      - name: Update date
+        run: ./scripts/update-line.sh 25
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
